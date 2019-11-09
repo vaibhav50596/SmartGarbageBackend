@@ -5,16 +5,19 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository(value = "SmartGarbageDao")
 public class SmartGarbageDaoImpl implements SmartGarbageDao {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
     @Override
-    public GarbageModel getGarbage() {
+    public List<GarbageModel> getGarbage() {
         String sqlQuery = "SELECT * from garbagedata";
         try{
-            return jdbcTemplate.queryForObject(sqlQuery, new SmartGarbageRowMapper());
+            List<GarbageModel> garbageList = jdbcTemplate.query(sqlQuery, new SmartGarbageRowMapper());
+            return garbageList;
         } catch (EmptyResultDataAccessException e) {
             return null;
         }
