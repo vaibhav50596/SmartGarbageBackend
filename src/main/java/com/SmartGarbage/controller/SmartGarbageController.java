@@ -19,5 +19,11 @@ public class SmartGarbageController {
         return garbageModel;
     }
 
+    @GetMapping(value = "/test")
+    public String getTest(){
+        String temp = "HelloWorld";
+        return temp;
+    }
+
 
 }
