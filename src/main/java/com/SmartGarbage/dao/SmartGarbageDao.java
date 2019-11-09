@@ -1,4 +1,7 @@
 package com.SmartGarbage.dao;
 
-public class SmartGarbageDao {
+import com.SmartGarbage.model.GarbageModel;
+
+public interface SmartGarbageDao {
+    public GarbageModel getGarbage();
 }
