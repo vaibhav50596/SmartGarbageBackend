@@ -23,6 +23,10 @@ public class SmartGarbageDaoImpl implements SmartGarbageDao {
         }
     }
 
+    public void putGarbageData(Integer myHouseId,String myHouseAddress, String myZipCode, Integer myRecycledquantity, Integer myLandFillQuantity, String myDate){
+
+    }
+
 
 
 
