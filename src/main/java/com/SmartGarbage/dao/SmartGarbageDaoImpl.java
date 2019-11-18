@@ -23,8 +23,15 @@ public class SmartGarbageDaoImpl implements SmartGarbageDao {
         }
     }
 
-
-
-
-
+    @Override
+    public void postGarbage(GarbageModel myModel){
+        try{
+            String sqlQuery = "INSERT INTO garbagedata (HouseAddress, ZipCode, RecycledQuantity," +
+                    "LandfillQuantity, DumpDate)" + "VALUES (?,?,?,?,?)";
+            jdbcTemplate.update(sqlQuery, myModel.getHouseAddress(), myModel.getZipCode(), myModel.getRecycledQuantity(),
+                    myModel.getLandfillQuantity(), myModel.getDate());
+        } catch (EmptyResultDataAccessException e) {
+            e.printStackTrace();
+        }
+    }
 }

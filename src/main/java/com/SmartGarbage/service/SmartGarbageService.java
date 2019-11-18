@@ -16,4 +16,8 @@ public class SmartGarbageService {
     public List<GarbageModel> getGarbage(){
         return smartGarbageDao.getGarbage();
     }
+
+    public void postGarbage(GarbageModel model) {
+        smartGarbageDao.postGarbage(model);
+    }
 }
