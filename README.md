@@ -11,7 +11,7 @@ port.
 The code does not create database and tables progrmmatically. Please create database and table manually using cmd or MySQL Workbench.
 you should have database schema as below:
 
-database name: garbagedb \n
+database name: garbagedb,
 table name: garbagedata
 
 SQL query to create table:
