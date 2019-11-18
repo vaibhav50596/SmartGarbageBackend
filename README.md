@@ -6,6 +6,8 @@ This application is developed in Spring Boot framework with MySQL database using
 in order to build and run this application on your machine. Also, you should have MySQL database running locally on localhost:3306
 port.
 
+## Database setup
+
 The code does not create database and tables progrmmatically. Please create database and table manually using cmd or MySQL Workbench.
 you should have database schema as below:
 
